@@ -1,0 +1,13 @@
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button [class.active]="activeComponent === 'index'" (click)="selectComponent('index')">
+      <ion-icon name="home-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button [class.active]="activeComponent === 'date'" (click)="selectComponent('date')">
+      <ion-icon name="heart-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button [class.active]="activeComponent === 'profil'" (click)="selectComponent('profil')">
+      <ion-icon name="person-circle-outline"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
