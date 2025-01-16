@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ComponentStatusService } from 'src/app/services/component-status.service';
 
 @Component({
   selector: 'app-profil',
@@ -6,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profil.component.scss'],
 })
 export class ProfilComponent  implements OnInit {
+  componantName: string = "profil"
 
-  constructor() { }
+  constructor(
+    private componentStatusService: ComponentStatusService
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.componentStatusService.updateCurrentComponent(this.componantName)
+  }
+
+  ngOnDestroy() {
+    this.componentStatusService.updateOldComponent(this.componantName)
+  }
 
 }

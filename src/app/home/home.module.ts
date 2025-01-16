@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { NavbarComponent } from '../components/navbar/navbar.component';
+import { TopbarComponent } from '../components/topbar/topbar.component';
 
 @NgModule({
   imports: [
@@ -14,6 +15,10 @@ import { NavbarComponent } from '../components/navbar/navbar.component';
     IonicModule,
     HomePageRoutingModule,
   ],
-  declarations: [HomePage, NavbarComponent]
+  declarations: [
+    HomePage, 
+    NavbarComponent,
+    TopbarComponent
+  ]
 })
 export class HomePageModule {}
